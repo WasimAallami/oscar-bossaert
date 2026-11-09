@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>École Fondamentale Communale Oscar Bossaert</title>
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #2980b9;
+            --accent: #27ae60;
+            --bg: #f8f9fa;
+            --text: #333;
+        }
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg);
+            color: var(--text);
+        }
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            text-align: center;
+            padding: 3rem 1rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.3rem;
+            font-weight: 700;
+        }
+        header p {
+            margin: 0.5rem 0 0 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 2.5rem auto;
+            padding: 0 1.5rem;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+        @media (max-width: 768px) {
+            .grid { grid-template-columns: 1fr; }
+        }
+        .card {
+            background: #fff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2rem;
+        }
+        .card h2 {
+            color: var(--primary);
+            border-bottom: 3px solid var(--secondary);
+            padding-bottom: 0.5rem;
+            margin-top: 0;
+        }
+        .hero-img-container {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 1px solid #ddd;
+        }
+        .hero-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .team-member {
+            background: #f1f4f6;
+            padding: 1rem;
+            border-left: 5px solid var(--accent);
+            margin: 1rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .info-list {
+            list-style: none;
+            padding: 0;
+        }
+        .info-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            flex-direction: column;
+        }
+        .info-list strong {
+            color: var(--primary);
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .info-list span, .info-list a {
+            color: #555;
+            text-decoration: none;
+            margin-top: 0.2rem;
+        }
+        .info-list a:hover {
+            color: var(--secondary);
+            text-decoration: underline;
+        }
+        .badge-transport {
+            display: inline-block;
+            padding: 0.2rem 0.6rem;
+            background: #e74c3c;
+            color: white;
+            font-weight: bold;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 0.3rem;
+        }
+        .badge-transport.tram { background: #f39c12; }
+        .badge-transport.bus { background: #3498db; }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background-color: var(--primary);
+            color: white;
+            margin-top: 5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>École Fondamentale Communale Oscar Bossaert</h1>
+        <p>Enseignement officiel subventionné de la Commune de Koekelberg</p>
+    </header>
+
+    <div class="container">
+        <div class="grid">
+            
+            <!-- Colonne principale (Gauche) -->
+            <div class="main-content">
+                <div class="card">
+                    <div class="hero-img-container">
+                        <!-- Intégration de l'image locale demandée par l'utilisateur -->
+                        <img class="hero-img" src="photo-ecole.jpg" alt="Façade de l'École Oscar Bossaert" onerror="this.src='https://images.unsplash.com/photo-1541339907198-e08756dedf3f?w=800'">
+                    </div>
+                    
+                    <h2>Notre Établissement</h2>
+                    <p>Située au cœur de la commune de <strong>Koekelberg</strong>, l'École Fondamentale Communale Oscar Bossaert accueille les enfants des sections maternelles et primaires dans un cadre chaleureux et propice à la réussite.</p>
+                    <p>Notre établissement s'engage au quotidien pour offrir un enseignement de qualité, basé sur le respect mutuel, le fair-play, l'épanouissement individuel et l'utilisation des nouvelles technologies au service des apprentissages (classes équipées de tableaux interactifs et de salles numériques).</p>
+                </div>
+
+                <div class="card">
+                    <h2>Que fait notre équipe éducative ?</h2>
+                    <p>Sous la supervision de la Direction et de l'administration communale de Koekelberg, notre équipe pédagogique dynamique accomplit de grandes choses chaque jour :</p>
+                    
+                    <div class="team-member">
+                        <strong>Direction de l'Établissement (M. Emmanuel Vandevelde)</strong>
+                        <p>Gestion globale, projets pédagogiques innovants et bien-être scolaire au centre de la commune.</p>
+                    </div>
+
+                    <div class="team-member" style="border-left-color: var(--secondary);">
+                        <strong>Le Corps Enseignant (Maternelle & Primaire)</strong>
+                        <p>Accompagnement individualisé des élèves. Organisation d'ateliers thématiques de sensibilisation à la solidarité, au respect des règles communes, à la camaraderie et à la lutte contre les discriminations.</p>
+                    </div>
+
+                    <div class="team-member" style="border-left-color: var(--primary);">
+                        <strong>L'Équipe d'Encadrement & Péri-scolaire</strong>
+                        <p>Assure la remédiation pour les enfants en difficulté, la gestion de la bibliothèque et la sécurité lors des activités intérieures et extérieures.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Colonne latérale (Droite) -->
+            <div class="sidebar">
+                <div class="card">
+                    <h2>Coordonnées & Rue</h2>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Commune</strong>
+                            <span>1081 Koekelberg (Région de Bruxelles-Capitale)</span>
+                        </li>
+                        <li>
+                            <strong>Adresse exacte</strong>
+                            <span>Rue Émile Sergijsels 15</span>
+                        </li>
+                        <li>
+                            <strong>Téléphone</strong>
+                            <a href="tel:024140086">02 414 00 86</a>
+                        </li>
+                        <li>
+                            <strong>E-mail Secrétariat</strong>
+                            <a href="mailto:oscar.bossaert@koekelberg.brussels">oscar.bossaert@koekelberg.brussels</a>
+                        </li>
+                        <li>
+                            <strong>E-mail Directeur</strong>
+                            <a href="mailto:evandevelde@koekelberg.brussels">evandevelde@koekelberg.brussels</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card">
+                    <h2>Arrêts & Transports proches</h2>
+                    <p>L'école est très accessible via le réseau de la <strong>STIB</strong> et de <strong>De Lijn</strong> :</p>
+                    <ul class="info-list">
+                        <li>
+                            <strong>Métro à proximité</strong>
+                            <span>
+                                <span class="badge-transport" style="background:#f1c40f; color:#000;">M2</span>
+                                <span class="badge-transport" style="background:#e74c3c;">M6</span>
+                                <strong>Simonis</strong> ou <strong>Étangs Noirs</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Tram (STIB)</strong>
+                            <span>
+                                <span class="badge-transport tram">T9</span>
+                                <span class="badge-transport tram">T19</span>
+                                Arrêt <strong>Simonis</strong> ou <strong>Vanhuffel</strong>
+                            </span>
+                        </li>
+                        <li>
+                            <strong>Bus (STIB / De Lijn)</strong>
+                            <span>
+                                <span class="badge-transport bus">13</span>
+                                <span class="badge-transport bus">20</span>
+                                <span class="badge-transport bus">86</span>
+                                Arrêts <strong>Autrique</strong> ou <strong>Vanhuffel</strong>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 - École Fondamentale Communale Oscar Bossaert. Enseignement de la Commune de Koekelberg.</p>
+    </footer>
+
+</body>
+</html>
